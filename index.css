@@ -1,16 +1,18 @@
+*, body {
+  margin: 0;
+  padding: 0;
+}
+
 .main-cont {
   height: 100vh;
-  width: 100vw;
+  /* width: 100vw; */
   background-color: black;
   display: flex;
   flex-direction: row;
   position: relative;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+
 
 .left {
   flex: 0.15;
@@ -229,8 +231,8 @@ video {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   z-index: 1;
 }
 
