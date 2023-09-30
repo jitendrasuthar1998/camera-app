@@ -119,16 +119,16 @@ video {
 }
 
 .record-btn {
-  width: 80%;
+  width: 75%;
   background-color: red;
-  height: 80%;
+  height: 75%;
   border-radius: 50%;
 }
 
 .capture-btn {
   background-color: white;
-  height: 80%;
-  width: 80%;
+  height: 75%;
+  width: 75%;
   border-radius: 50%;
 }
 
@@ -218,18 +218,6 @@ video {
     justify-content: center;
     align-items: center;
     margin-right: 50px;
-  }
-
-  .record-btn {
-    height: 80%;
-    width: 80%;
-    background-color: red;
-  }
-
-  .capture-btn {
-    height: 80%;
-    width: 80%;
-    background-color: white;
   }
 
   .timer-cont {
