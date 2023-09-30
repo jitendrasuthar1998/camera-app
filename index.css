@@ -1,0 +1,269 @@
+.main-cont {
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.left {
+  flex: 0.15;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle {
+  flex: 0.7;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.right {
+  flex: 0.15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-cont {
+  height: 400px;
+  width: 100px;
+  /* border: 1px solid orange; */
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+}
+
+.filter {
+  flex: 1;
+  width: 100px;
+  background-image: url("https://picsum.photos/seed/picsum/200/300");
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+.timer-cont {
+  margin-top: 90px;
+  background-color: white;
+}
+
+.timer{
+    display: none;
+}
+
+.orange {
+  background-color: rgba(255, 166, 0, 0.4);
+  background-blend-mode: color-burn;
+}
+
+.brown {
+  background-color: rgba(165, 42, 42, 0.4);
+  background-blend-mode: color-burn;
+}
+
+.pink {
+  background-color: rgba(255, 192, 203, 0.4);
+  background-blend-mode: color-burn;
+}
+
+.transparent {
+  background-color: transparent;
+}
+
+.actions-cont {
+  height: 300px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 4;
+}
+
+.actions-cont > * {
+  cursor: pointer;
+}
+
+.record-btn-cont {
+  height: 95px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.capture-btn-cont {
+  border-radius: 50%;
+  border: 5px solid white;
+  height: 95px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.record-btn {
+  width: 80%;
+  background-color: red;
+  height: 80%;
+  border-radius: 50%;
+}
+
+.capture-btn {
+  background-color: white;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+#gallery-icon {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  bottom: 5%;
+  right: 7%;
+  z-index:4;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 750px) {
+  .main-cont {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  .left {
+    flex: 0.15;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  .middle {
+    flex: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .right {
+    flex: 0.15;
+  }
+
+  .filter-cont {
+    height: 50%;
+    width: 60%;
+    display: flex;
+    z-index:4;
+    flex-direction: row;
+  }
+
+  .filter {
+    flex: 1;
+  }
+
+  video {
+    width: 100%;
+    height: 70%;
+  }
+
+  .actions-cont {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom:30px;
+    z-index:4;
+  }
+
+  .record-btn-cont {
+    height: 60px;
+    width: 60px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .capture-btn-cont {
+    height: 60px;
+    width: 60px;
+    margin-left: 80px;
+    border: 5px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+  }
+
+  .record-btn {
+    height: 80%;
+    width: 80%;
+    background-color: red;
+  }
+
+  .capture-btn {
+    height: 80%;
+    width: 80%;
+    background-color: white;
+  }
+
+  .timer-cont {
+    margin-top: 0;
+  }
+}
+
+.filter-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+.scale-record {
+  animation-name: scale-record;
+  animation-iteration-count: infinite;
+  animation-duration: 1s;
+}
+
+.scale-capture {
+  animation-name: scale-record;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+
+@keyframes scale-record {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
+}
