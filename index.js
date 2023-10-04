@@ -40,6 +40,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
       let videoEntry = {
         id: `vid-${videoId}`,
         blobData: blob,
+        time:new Date()
       };
       videoStore.add(videoEntry);
     }
@@ -145,6 +146,7 @@ captureBtnCont.addEventListener("click", (e) => {
     let imageEntry = {
       id: `img-${imageId}`,
       url: imageURL,
+      time:new Date()
     };
     imageStore.add(imageEntry);
   }
