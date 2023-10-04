@@ -9,9 +9,9 @@ setTimeout(() => {
     let videoRequest = videoStore.getAll();
 
     videoRequest.onsuccess = (e) => {
-      console.log("e is == ", e);
+      // console.log("e is == ", e);
       let videoResult = videoRequest.result;
-      console.log("video result is == ", videoResult);
+      // console.log("video result is == ", videoResult);
 
       let galleryCont = document.querySelector(".gallery-cont");
 
@@ -47,9 +47,9 @@ setTimeout(() => {
     let imageRequest = imageStore.getAll();
 
     imageRequest.onsuccess = (e) => {
-      console.log("e is == ", e);
+      // console.log("e is == ", e);
       let imageResult = imageRequest.result;
-      console.log("image result is == ", imageResult);
+      // console.log("image result is == ", imageResult);
 
       let galleryCont = document.querySelector(".gallery-cont");
 
@@ -117,12 +117,12 @@ function downloadListener(e) {
     videoRequest.onsuccess = (e) => {
       let videoResult = videoRequest.result;
 
-      console.log("videoResult is == ", videoResult);
+      // console.log("videoResult is == ", videoResult);
 
       let videoUrl = window.URL.createObjectURL(videoResult.blobData);
       let a = document.createElement("a");
       a.href = videoUrl;
-      a.download = "stream.mp4";
+      a.download = `stream-${(new Date()).toJSON()}.mp4`;
       a.click();
     };
   } else if (type === "img") {
@@ -130,16 +130,16 @@ function downloadListener(e) {
     let imageStore = dbTransactionImage.objectStore("image");
     let imageRequest = imageStore.get(id);
 
-    console.log("image request is == ", imageRequest);
-    console.log('id == ', id); 
+    // console.log("image request is == ", imageRequest);
+    // console.log('id == ', id); 
     imageRequest.onsuccess = (e) => {
       let imageResult = imageRequest.result;    
 
-      console.log("imageResult is == ", imageResult);
+      // console.log("imageResult is == ", imageResult);
 
       let a = document.createElement("a");
       a.href = imageResult.url;
-      a.download = "image.jpg";
+      a.download =  `image-${(new Date()).toJSON()}.jpg`;
       a.click();
     };
   }
