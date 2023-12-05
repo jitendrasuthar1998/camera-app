@@ -2,33 +2,30 @@ setTimeout(() => {
   if (db) {
     // video retrival
 
-    //image retrival
-
     let dbTransactionVideo = db.transaction("video", "readonly");
     let videoStore = dbTransactionVideo.objectStore("video");
     let videoRequest = videoStore.getAll();
 
     videoRequest.onsuccess = (e) => {
-      // console.log("e is == ", e);
       let videoResult = videoRequest.result;
-      // console.log("video result is == ", videoResult);
-
       let galleryCont = document.querySelector(".gallery-cont");
 
       videoResult.forEach((video) => {
         let mediaElem = document.createElement("div");
         mediaElem.setAttribute("class", "media-cont");
         mediaElem.setAttribute("id", video.id);
-        mediaElem.setAttribute("title", video.id);
+        // mediaElem.setAttribute("title", video.id);
 
         let url = URL.createObjectURL(video.blobData);
 
         mediaElem.innerHTML = `
             <div class="media">
-                <video autoplay loop src="${url}"></video>
+                <video autoplay loop src="${url}">
+                </video>
+                
             </div>
-            <div class="download action-btn">Download</div>
-            <div class="delete action-btn">Delete</div>
+            <div title="Dowload Video" class="download action-btn">Download</div>
+            <div title="Delete Video" class="delete action-btn">Delete</div>
             `;
 
         galleryCont.appendChild(mediaElem);
@@ -48,10 +45,7 @@ setTimeout(() => {
     let imageRequest = imageStore.getAll();
 
     imageRequest.onsuccess = (e) => {
-      // console.log("e is == ", e);
       let imageResult = imageRequest.result;
-      // console.log("image result is == ", imageResult);
-
       let galleryCont = document.querySelector(".gallery-cont");
 
       imageResult.forEach((image) => {
@@ -65,8 +59,8 @@ setTimeout(() => {
             <div class="media">
                 <img src="${url}"/>
             </div>
-            <div class="download action-btn">Download</div>
-            <div class="delete action-btn">Delete</div>
+            <div title="Dowload Image" class="download action-btn">Download</div>
+            <div title="Delete Image" class="delete action-btn">Delete</div>
             `;
 
         galleryCont.appendChild(mediaElem);
@@ -85,8 +79,6 @@ setTimeout(() => {
 // first check that select element is video or image element.
 
 function deleteListener(e) {
-  //   console.log("id is == ", e.target.parentElement.getAttribute("id"));
-
   //db removal
 
   let id = e.target.parentElement.getAttribute("id");
@@ -130,14 +122,8 @@ function downloadListener(e) {
     let dbTransactionImage = db.transaction("image", "readwrite");
     let imageStore = dbTransactionImage.objectStore("image");
     let imageRequest = imageStore.get(id);
-
-    // console.log("image request is == ", imageRequest);
-    // console.log('id == ', id); 
     imageRequest.onsuccess = (e) => {
       let imageResult = imageRequest.result;    
-
-      // console.log("imageResult is == ", imageResult);
-
       let a = document.createElement("a");
       a.href = imageResult.url;
       a.download =  `image-${(new Date()).toJSON()}.jpg`;

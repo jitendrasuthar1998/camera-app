@@ -34,7 +34,6 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
 
     if (db) {
       let videoId = shortid();
-      // console.log("videoId is == ", videoId);
       let dbTransaction = db.transaction("video", "readwrite");
       let videoStore = dbTransaction.objectStore("video");
       let videoEntry = {
@@ -45,15 +44,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
       videoStore.add(videoEntry);
     }
 
-    // let videoUrl = window.URL.createObjectURL(blob);
 
-    // let a = document.createElement("a");
-
-    // a.href = videoUrl;
-
-    // a.download = "stream.mp4";
-
-    // a.click();
   });
 });
 
@@ -131,16 +122,12 @@ captureBtnCont.addEventListener("click", (e) => {
 
   let imageURL = canvas.toDataURL();
 
-  // let a = document.createElement("a");
-  // a.href = imageURL;
-  // a.download = "image.jpg";
-  // a.click();
 
   // save image to indexDb when user clicks on image.
 
   if (db) {
     let imageId = shortid();
-    // console.log("image is == ", imageId);
+
     let dbTransaction = db.transaction("image", "readwrite");
     let imageStore = dbTransaction.objectStore("image");
     let imageEntry = {
@@ -167,7 +154,6 @@ allFilters.forEach((item) => {
 
     transparentColor =
       getComputedStyle(item).getPropertyValue("background-color");
-    // console.log("transparentColor is == ", transparentColor);
 
     filterLayer.style.backgroundColor = transparentColor;
   });

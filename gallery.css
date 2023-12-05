@@ -30,11 +30,11 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     padding-top:2rem;
+    gap:10px;
 }
 
 .media{
     height: calc(100% - 2rem - 2rem);
-    /* background-color: orange; */
 }
 
 .media *{
@@ -47,8 +47,6 @@ body{
     height: 15rem;
     width:15rem;
     border:10px solid white;
-    margin-right:10px;
-    /* background-color: lightblue; */
 }
 
 .action-btn{
@@ -68,3 +66,6 @@ body{
     background-color: red;
 }
 
+.btn{
+    z-index: 3;
+}
