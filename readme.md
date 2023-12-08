@@ -21,7 +21,7 @@ There are three sections in this application.
 
 #### Buttons
 
-There are two buttons in this application. 
+There are three buttons in this application. 
 
 * The first button is for record video.
 
@@ -47,3 +47,11 @@ There are two buttons in this application.
 * If you want to apply any filter on your video or image, that time just clicks on any one of the filter from available filters.
 
 * If you want to see the video which you recorded, or image which you captured, that time just click on Gallery button.
+
+### Setup
+
+* To start this application into your system, just clone this repository.
+
+* After cloning repository, open this repo in vs code, and then start live server.
+
+* Now, this camera application get started in your system.
