@@ -5,6 +5,14 @@ If you want to capture your picture or video, you can do this by this Camera App
 
 Also, You can download your video or image.
 
+### Screenshots
+
+[![camera-app.png](https://i.postimg.cc/sxVD0PF2/camera-app.png)](https://postimg.cc/tZMjsx40)
+
+[![camera-gallery.png](https://i.postimg.cc/C5Wrx7Fh/camera-gallery.png)](https://postimg.cc/GTxxMk8V)
+
+
+
 ### Technology Used
 
 * JavaScript DOM
