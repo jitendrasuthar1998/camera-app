@@ -7,10 +7,13 @@ Also, You can download your video or image.
 
 ### Screenshots
 
-[![camera-app.png](https://i.postimg.cc/sxVD0PF2/camera-app.png)](https://postimg.cc/tZMjsx40)
+<!-- [![camera-app.png](https://i.postimg.cc/sxVD0PF2/camera-app.png)](https://postimg.cc/tZMjsx40) -->
 
-[![camera-gallery.png](https://i.postimg.cc/C5Wrx7Fh/camera-gallery.png)](https://postimg.cc/GTxxMk8V)
+<img src="https://i.postimg.cc/sxVD0PF2/camera-app.png" style="max-width:100%; margin-bottom:10px">
 
+<!-- [![camera-gallery.png](https://i.postimg.cc/C5Wrx7Fh/camera-gallery.png)](https://postimg.cc/GTxxMk8V) -->
+
+<img src="https://i.postimg.cc/C5Wrx7Fh/camera-gallery.png" max-width="100%">
 
 
 ### Technology Used
