@@ -20,7 +20,7 @@ setTimeout(() => {
 
         mediaElem.innerHTML = `
             <div class="media">
-                <video autoplay loop src="${url}">
+                <video src="${url}" controls>
                 </video>
                 
             </div>
