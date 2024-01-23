@@ -1,0 +1,25 @@
+{
+  "name": "responsive-camera-app",
+  "version": "1.0.0",
+  "description": "## Introduction If you want to capture your picture or video, you can do this by this Camera Application.",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build --dist-dir dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/learnwithjs/responsive-camera-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/learnwithjs/responsive-camera-app/issues"
+  },
+  "homepage": "https://github.com/learnwithjs/responsive-camera-app#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
+}

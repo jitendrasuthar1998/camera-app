@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Camera Gallery App</title>
     <link type="image/png" sizes="32x32" rel="icon" href="./assets/camera.png">
+    <link rel="preload" fetchpriority="high" as="image" href="/assets/bgImage.webp" type="image/webp">
+    <style>
+        .filter {
+            flex: 1;
+            width: 100px;
+            background-image: url("./assets/bgImage.webp");
+            background-position: center;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            cursor: pointer;
+        }
+    </style>
     <link rel="preload stylesheet" href="./index.css" />
+
     <link rel="preload" href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
 </head>
 
 <body>
@@ -27,13 +41,13 @@
         </div>
 
         <div class="video-cont middle">
-            <video autoplay src=""></video>
+            <video autoplay></video>
         </div>
 
         <div class="right">
             <div class="actions-cont">
                 <div title="Record Video" class="record-btn-cont">
-                    <div  class="record-btn"></div>
+                    <div class="record-btn"></div>
                 </div>
                 <div title="Capture Image" class="capture-btn-cont">
                     <div class="capture-btn"></div>
@@ -41,19 +55,13 @@
             </div>
         </div>
 
-        <span title="Gallery" id="gallery-icon" class="material-icons gallery">collections</span>
+        <a title="Gallery" id="gallery-icon" class="material-icons gallery" href="gallery.html"><img src="./assets/collections.png"
+                width="40px" height="40px" /></a>
 
         <div class="filter-layer"></div>
         <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
         <script src="index.js"></script>
         <script src="db.js"></script>
-
-        <script>
-            let gallery = document.querySelector(".gallery");
-            gallery.addEventListener("click", (e) => {
-                location.assign("./gallery.html");
-            });
-        </script>
     </div>
 </body>
 

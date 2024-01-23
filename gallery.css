@@ -22,6 +22,10 @@ body{
     cursor: pointer;
 }
 
+a{
+    text-decoration: none;
+}
+
 .gallery-cont{
     background-color: rgb(206, 213, 192);
     min-height: 100vh;
