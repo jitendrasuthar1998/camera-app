@@ -1,4 +1,5 @@
-*, body {
+*,
+body {
   margin: 0;
   padding: 0;
 }
@@ -11,8 +12,6 @@
   flex-direction: row;
   position: relative;
 }
-
-
 
 .left {
   flex: 0.15;
@@ -54,8 +53,8 @@ video {
   background-color: white;
 }
 
-.timer{
-    display: none;
+.timer {
+  display: none;
 }
 
 .orange {
@@ -128,11 +127,11 @@ video {
   position: absolute;
   bottom: 5%;
   right: 7%;
-  padding:5px;
-  z-index:4;
+  padding: 5px;
+  z-index: 4;
   cursor: pointer;
   border-radius: 50%;
-  background-color:white;
+  background-color: white;
 }
 
 @media only screen and (max-width: 750px) {
@@ -167,7 +166,7 @@ video {
     height: 50%;
     width: 60%;
     display: flex;
-    z-index:4;
+    z-index: 4;
     flex-direction: row;
   }
 
@@ -187,8 +186,8 @@ video {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom:30px;
-    z-index:4;
+    padding-bottom: 30px;
+    z-index: 4;
   }
 
   .record-btn-cont {
@@ -204,7 +203,7 @@ video {
   .capture-btn-cont {
     height: 60px;
     width: 60px;
-    margin-left: 80px;
+    margin-left: 50px;
     border: 5px solid white;
     border-radius: 50%;
     display: flex;
@@ -215,6 +214,18 @@ video {
 
   .timer-cont {
     margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .record-btn-cont {
+    height: 50px;
+    width: 50px;
+  }
+
+  .capture-btn-cont {
+    height: 50px;
+    width: 50px;
   }
 }
 
