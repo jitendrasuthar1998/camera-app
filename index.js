@@ -13,6 +13,8 @@ let constraints = {
   audio: true,
 };
 
+// getting user permission to access camera and microphone
+
 navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
   video.srcObject = stream;
 
@@ -31,7 +33,7 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
     let blob = new Blob(chunks, { type: "video/mp4" });
 
     //save video to indexDb when user stop recording
-
+    
     if (db) {
       let videoId = shortid();
       let dbTransaction = db.transaction("video", "readwrite");
@@ -43,8 +45,6 @@ navigator.mediaDevices.getUserMedia(constraints).then((stream) => {
       };
       videoStore.add(videoEntry);
     }
-
-
   });
 });
 

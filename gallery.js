@@ -78,10 +78,10 @@ setTimeout(() => {
 //remove image or video from ui and also from db.
 // first check that select element is video or image element.
 
-function deleteListener(e) {
+function deleteListener(event) {
   //db removal
 
-  let id = e.target.parentElement.getAttribute("id");
+  let id = event.target.parentElement.getAttribute("id");
   let type = id.slice(0, 3);
 
   if (type === "vid") {
@@ -96,11 +96,11 @@ function deleteListener(e) {
     imageStore.delete(id);
   }
 
-  e.target.parentElement.remove();
+  event.target.parentElement.remove();
 }
 
-function downloadListener(e) {
-  let id = e.target.parentElement.getAttribute("id");
+function downloadListener(event) {
+  let id = event.target.parentElement.getAttribute("id");
   let type = id.slice(0, 3);
 
   if (type === "vid") {

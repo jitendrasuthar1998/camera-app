@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Camera Gallery App</title>
+    <title>Camera App</title>
     <link type="image/png" sizes="32x32" rel="icon" href="./assets/camera.png">
-    <link rel="preload" fetchpriority="high" as="image" href="/assets/bgImage.webp" type="image/webp">
+    <link rel="preload" as="image" fetchpriority="high" href="/assets/bgImage.webp" type="image/webp">
     <style>
         .filter {
             flex: 1;
@@ -55,13 +55,13 @@
             </div>
         </div>
 
-        <a title="Gallery" id="gallery-icon" class="material-icons gallery" href="gallery.html"><img src="./assets/collections.png"
-                width="30px" height="30px" /></a>
+        <a title="Gallery" id="gallery-icon" class="material-icons gallery" href="./gallery.html"><img
+                src="./assets/collections.png" width="30px" height="30px" alt="gallery" /></a>
 
         <div class="filter-layer"></div>
         <script src="https://unpkg.com/shortid-dist@1.0.5/dist/shortid-2.2.13.min.js"></script>
-        <script src="index.js"></script>
-        <script src="db.js"></script>
+        <script src="./db.js"></script>
+        <script src="./index.js"></script>
     </div>
 </body>
 
